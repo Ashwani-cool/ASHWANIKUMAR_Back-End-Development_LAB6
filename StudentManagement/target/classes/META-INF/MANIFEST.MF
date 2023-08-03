@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: a0k05v0
+Build-Jdk: 17.0.7
+Implementation-Title: StudentManagement
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.greatlearning
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/StudentManagement
+Created-By: Maven Integration for Eclipse
+
