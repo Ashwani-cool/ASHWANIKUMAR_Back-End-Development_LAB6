@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+</head>
+
+<body>
+	<div>
+		<h4
+			style="background-color: black; color: white; height: 60px; line-height: 2.2; margin-left: 10px; margin-right: 10px;">
+			<span style="margin-left: 10px">Student Management System</span>
+		</h4>
+		<div class="container"
+			style="border: 0.5px solid lightgray; width: 40%">
+			<p class="h4 mb-4" style="text-align: center; margin-top: 10px"
+				th:text="${heading}"></p>
+
+			<form action="#" th:action="@{/students/save}" th:object="${student}"
+				method="POST" style="margin-left: 60px">
+
+				<input type="hidden" th:field="*{id}" />
+				<div>
+					<label for="firstName">Student First Name</label> <input
+						type="text" th:field="*{firstName}"
+						class="form-control mb-4 col-10" placeholder="Enter First Name">
+				</div>
+				<div>
+					<label for="lastName">Student Last Name</label> <input type="text"
+						th:field="*{lastName}" class="form-control mb-4 col-10"
+						placeholder="Enter Last Name">
+				</div>
+				<div>
+					<label for="course">Course</label> <input type="text"
+						th:field="*{course}" class="form-control mb-4 col-10"
+						placeholder="Enter Course">
+				</div>
+				<div>
+					<label for="country">Country</label> <input type="text"
+						th:field="*{country}" class="form-control mb-4 col-10"
+						placeholder="Enter Country">
+				</div>
+				<button type="submit" class="btn btn-info col-2">Submit</button>
+
+			</form>
+
+			<hr>
+			<a th:href="@{/students/list}">Back to students List</a>
+		</div>
+	</div>
+</body>
+</html>
